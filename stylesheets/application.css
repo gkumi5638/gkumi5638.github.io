@@ -35,3 +35,15 @@ body {
   text-align: center;
   padding: 30px;
 }
+/* グローバルナビ*/
+.global-nav{
+  width: 980px;
+  margin: 0 auto;
+}
+
+.global-nav__items{
+  width: 980px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+ }
