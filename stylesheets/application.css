@@ -47,3 +47,12 @@ body {
   display: flex;
   justify-content: center;
  }
+
+ /*色を交互に*/
+ .global-nav__item:nth-child(even){
+   background-color: #A9A9A9;
+ }
+
+ .global-nav__item:nth-child(odd){
+   background-color: #DCDCDC;
+ }
