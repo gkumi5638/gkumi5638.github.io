@@ -35,7 +35,7 @@ body {
   text-align: center;
   padding: 30px;
 }
-/* グローバルナビ*/
+/* グローバルナビ */
 .global-nav{
   width: 980px;
   margin: 0 auto;
@@ -45,10 +45,13 @@ body {
   width: 980px;
   height: 50px;
   display: flex;
-  justify-content: center;
+  justify-content: between;
  }
 
- /*色を交互に*/
+/* 均等配置 */
+li { flex: auto; -webkit-flex: auto; }
+
+ /* 色を交互に */
  .global-nav__item:nth-child(even){
    background-color: #A9A9A9;
  }
