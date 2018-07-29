@@ -71,3 +71,9 @@ body {
    display: flex;
    align-items: center;
  }
+
+ /* 広告バナーを横並びに */
+.top-ads__items{
+  display: flex;
+  justify-content: space-around;
+}
