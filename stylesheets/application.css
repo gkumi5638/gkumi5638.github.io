@@ -49,7 +49,8 @@ body {
  }
 
 /* 均等配置 */
-li { flex: auto; -webkit-flex: auto; }
+.global-nav__items li { flex: auto; -webkit-flex: auto;
+}
 
  /* 色を交互に */
  .global-nav__item:nth-child(even){
