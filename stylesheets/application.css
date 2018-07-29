@@ -60,3 +60,14 @@ body {
  .global-nav__item:nth-child(odd){
    background-color: #DCDCDC;
  }
+
+ /* パンくずリストを横並びに */
+ .bread-crumbs__items{
+   display: flex;
+ }
+
+ .bread-crumbs__items li{
+   height: 30px;
+   display: flex;
+   align-items: center;
+ }
