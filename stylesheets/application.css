@@ -73,7 +73,21 @@ body {
  }
 
  /* 広告バナーを横並びに */
+.top-ads{
+  box-sizing: border-box;
+  width: 980px;
+  background-color: #DCDCDC;
+  padding: 25px;
+  margin: 10px auto;
+}
+
 .top-ads__items{
   display: flex;
-  justify-content: space-around;
+  flex: 1;
+  padding: 0 8px;
+}
+
+.top-ads__item{
+  flex: 1;
+  margin: 0 -10px;
 }
