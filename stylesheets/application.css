@@ -94,3 +94,39 @@ body {
 .top-ads__image {
     max-width: 100%;
 }
+
+/* 大枠のレイアウト配置 */
+
+.body{
+  display: flex;
+}
+
+.aside{
+  order: -1;
+}
+
+.main{
+ 　order: 0;
+  background-color: white;
+}
+
+.footer{
+  display: flex;
+  background-color: #3b3b3b;
+}
+
+.footer-nav{
+  display: flex;
+  order: 0
+}
+
+.about-author{
+  order: 1;
+  background-color: #DCDCDC;
+}
+
+.footer-copyright{
+  order: 0;
+  align-self: flex-end;
+  background-color: white;
+}
