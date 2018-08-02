@@ -113,20 +113,24 @@ body {
 .footer{
   display: flex;
   background-color: #3b3b3b;
+  flex-wrap: wrap; /* 他の行へ折り返します */
 }
 
 .footer-nav{
   display: flex;
-  order: 0
+  order: 0;
+  flex-basis: 50%; /* flexの幅の指定はwidthで指定しない */
 }
 
 .about-author{
   order: 1;
   background-color: #DCDCDC;
+  flex-basis: 50%;
 }
 
 .footer-copyright{
-  order: 0;
-  align-self: flex-end;
+  order: 2;
+  flex-basis: 100%;
+  text-align: center;
   background-color: white;
 }
