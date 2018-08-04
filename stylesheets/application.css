@@ -180,3 +180,9 @@ body {
 .article__order-list-item{
  margin: 20px 10px;
 }
+
+/* 唐揚げ画像のサイズ調整 */
+.article__image{
+  width: 95%;
+  margin: 20px 15px;
+}
