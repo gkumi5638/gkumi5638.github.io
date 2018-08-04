@@ -133,3 +133,50 @@ body {
   text-align: center;
   background-color: white;
 }
+
+/* 記事の周囲に余白を設定 */
+/* ページタイトル */
+.main-header{
+  background-color: white;
+  height: 80px;
+}
+.main-header__title{
+  font-size: 30px;
+}
+
+/* 記事タイトル */
+.article__title{
+  font-size: 25px;
+  margin: 20px 10px;
+}
+
+/* 段落 */
+.article__paragraph{
+  margin: 20px 10px 10px 10px;
+}
+
+/* 記事見出し */
+.article__sub-title{
+  margin: 20px 10px;
+  font-size: 25px;
+}
+
+/* 番号なしリスト */
+.article__unorder-list-item{
+  margin: 20px 10px;
+}
+
+/* 引用文内 */
+.article__blockquote{
+  margin: 20px 10px;
+}
+
+/* 小見出し */
+.article__sub-sub-title{
+ margin: 20px 10px;
+}
+
+/* 番号ありリスト */
+.article__order-list-item{
+ margin: 20px 10px;
+}
