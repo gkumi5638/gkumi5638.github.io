@@ -173,12 +173,12 @@ body {
 
 /* 小見出し */
 .article__sub-sub-title{
- margin: 20px 10px;
+  margin: 20px 10px;
 }
 
 /* 番号ありリスト */
 .article__order-list-item{
- margin: 20px 10px;
+  margin: 20px 10px;
 }
 
 /* 唐揚げ画像のサイズ調整 */
