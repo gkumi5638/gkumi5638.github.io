@@ -24,7 +24,6 @@ body {
 }
 
 /* サイトタイトル部分の高さや文字の配置など */
-
 .header{
   background-color: gray;
   height: 80px;}
@@ -107,7 +106,7 @@ body {
 
 .main{
  　order: 0;
-  background-color: white;
+  background-color: #e6e6e6;
 }
 
 .footer{
