@@ -146,12 +146,14 @@ box-shadow: 1px 1px 1px 1px #dadada;
 }
 .main-header__title{
   font-size: 30px;
+  font-weight: bold;
 }
 
 /* 記事タイトル */
 .article__title{
   font-size: 25px;
   margin: 20px 10px;
+  font-weight: bold;
 }
 
 /* 段落 */
@@ -163,6 +165,7 @@ box-shadow: 1px 1px 1px 1px #dadada;
 .article__sub-title{
   margin: 20px 10px;
   font-size: 25px;
+  font-weight: bold;
 }
 
 /* 番号なしリスト */
@@ -178,6 +181,7 @@ box-shadow: 1px 1px 1px 1px #dadada;
 /* 小見出し */
 .article__sub-sub-title{
   margin: 20px 10px;
+  font-weight: bold;
 }
 
 /* 番号ありリスト */
