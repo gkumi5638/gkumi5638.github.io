@@ -116,7 +116,7 @@ body {
 }
 
 .main{
- 　order: 0;
+  order: 0;
   background-color: #e6e6e6;
 }
 
@@ -145,13 +145,13 @@ body {
   background-color: white;
 }
 
-/*ページタイトル*/
+/* ページタイトル */
 .main-header{
   margin: -5px auto;
   background-color: white;
   height: 80px;
-  -webkit-box-shadow: 1px 1px 1px 1px #dadada;
-box-shadow: 1px 1px 1px 1px #dadada;
+  -webkit-box-shadow: 1px 1px 1px 1px #dadada; /* ボックスの下に色をつけた*/
+  box-shadow: 1px 1px 1px 1px #dadada;
 }
 
 .main-header__title{
@@ -160,68 +160,68 @@ box-shadow: 1px 1px 1px 1px #dadada;
 }
 
 
-/*記事タイトル*/
+/* 記事タイトル */
 .article__title{
   font-size: 25px;
   margin: 20px 10px;
   font-weight: bold;
 }
 
-/*段落*/
+/* 段落 */
 .article__paragraph{
   margin: 20px 10px 10px 10px;
 }
 
-/* 記事の一部を太字に*/
+/* 記事の一部を太字に */
 .article__strong{
   font-weight: bold;
 }
 
-/*記事見出し*/
+/* 記事見出し */
 .article__sub-title{
   margin: 20px 10px;
   font-size: 25px;
   font-weight: bold;
 }
 
-/*番号なしリスト*/
+/* 番号なしリスト */
 .article__unorder-list-item{
   margin: 20px 10px;
 }
 
-/*引用文内*/
+/* 引用文内 */
 .article__blockquote{
   margin: 20px 10px;
 }
 
-/*小見出し*/
+/* 小見出し */
 .article__sub-sub-title{
- margin: 20px 10px;
- font-weight: bold;
+  margin: 20px 10px;
+  font-weight: bold;
 }
 
-/*番号ありリスト*/
+/* 番号ありリスト */
 .article__order-list-item{
- margin: 20px 10px;
+  margin: 20px 10px;
 }
 
-/*唐揚げ画像のサイズ調整*/
+/* 唐揚げ画像のサイズ調整 */
 .article__image{
   width: 95%;
   margin: 20px 15px;
 }
 
 
-/*問い合わせフォーム
+/* 問い合わせフォーム
 .form{
   background-color: white;
 }
 
 .form-item{
   text-align:　center;
-}*/
+} */
 
-/*広告バナーの周囲に余白を設定*/
+/* 広告バナーの周囲に余白を設定 */
 .aside-ads__item{
   margin: 10px 15px;
 }
