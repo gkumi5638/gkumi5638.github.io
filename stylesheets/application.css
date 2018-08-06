@@ -139,6 +139,10 @@ body {
 .main-header{
   background-color: white;
   height: 80px;
+  -webkit-box-shadow: 1px 1px 1px 1px #dadada;
+box-shadow: 1px 1px 1px 1px #dadada;
+}
+
 }
 .main-header__title{
   font-size: 30px;
