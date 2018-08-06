@@ -24,9 +24,11 @@ body {
 }
 
 /* サイトタイトル部分の高さや文字の配置など */
+
 .header{
   background-color: gray;
-  height: 80px;}
+  height: 80px;
+}
 
 .header__title{
   color: #000000;
@@ -34,7 +36,8 @@ body {
   text-align: center;
   padding: 30px;
 }
-/* グローバルナビ */
+
+/* グローバルナビ*/
 .global-nav{
   width: 980px;
   margin: 0 auto;
@@ -47,47 +50,56 @@ body {
   justify-content: between;
  }
 
-/* 均等配置 */
+
+/*均等配置*/
 .global-nav__items li { flex: auto; -webkit-flex: auto;
 }
 
- /* 色を交互に */
- .global-nav__item:nth-child(even){
-   background-color: #A9A9A9;
- }
 
- .global-nav__item:nth-child(odd){
-   background-color: #DCDCDC;
- }
+/*色を交互に*/
+.global-nav__item:nth-child(even){
+  background-color: #A9A9A9;
+}
 
- /* パンくずリストを横並びに */
- .bread-crumbs__items{
-   display: flex;
- }
+.global-nav__item:nth-child(odd){
+  background-color: #DCDCDC;
+}
 
- .bread-crumbs__items li{
-   height: 30px;
-   display: flex;
-   align-items: center;
- }
+/* パンくずリストを横並びに */
+.bread-crumbs__items{
+  display: flex;
+}
 
- /* 広告バナーを横並びに */
+.bread-crumbs__items li{
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+/* パンくずリストに">"を追加 */
+.bread-crumbs__items li:not(:last-child)::after{
+  content: ">";
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+/* 広告バナーを横並びに */
 .top-ads{
   box-sizing: border-box;
   width: 980px;
   background-color: #DCDCDC;
   padding: 25px;
-  margin: 10px auto;
+  margin: 5px auto;
 }
 
 .top-ads__items{
   display: flex;
-  padding: 0 8px;
+  padding: 0px 8px;
 }
 
 .top-ads__item{
   flex: 1;
-  margin: 0 -10px;
+  margin: 0 8px;
 }
 
 .top-ads__image {
@@ -112,13 +124,13 @@ body {
 .footer{
   display: flex;
   background-color: #3b3b3b;
-  flex-wrap: wrap; /* 他の行へ折り返します */
+  flex-wrap: wrap;
 }
 
 .footer-nav{
   display: flex;
   order: 0;
-  flex-basis: 50%; /* flexの幅の指定はwidthで指定しない */
+  flex-basis: 50%;
 }
 
 .about-author{
@@ -134,63 +146,81 @@ body {
   background-color: white;
 }
 
-/* 記事の周囲に余白を設定 */
-/* ページタイトル */
+/*ページタイトル*/
 .main-header{
+  margin: -10px auto;
   background-color: white;
   height: 80px;
   -webkit-box-shadow: 1px 1px 1px 1px #dadada;
 box-shadow: 1px 1px 1px 1px #dadada;
-}
-
 }
 .main-header__title{
   font-size: 30px;
   font-weight: bold;
 }
 
-/* 記事タイトル */
+/*記事タイトル*/
 .article__title{
   font-size: 25px;
   margin: 20px 10px;
   font-weight: bold;
 }
 
-/* 段落 */
+/*段落*/
 .article__paragraph{
   margin: 20px 10px 10px 10px;
 }
 
-/* 記事見出し */
+/* 記事の一部を太字に*/
+.article__strong{
+  font-weight: bold;
+}
+
+/*記事見出し*/
 .article__sub-title{
   margin: 20px 10px;
   font-size: 25px;
   font-weight: bold;
 }
 
-/* 番号なしリスト */
+/*番号なしリスト*/
 .article__unorder-list-item{
   margin: 20px 10px;
 }
 
-/* 引用文内 */
+/*引用文内*/
 .article__blockquote{
   margin: 20px 10px;
 }
 
-/* 小見出し */
+/*小見出し*/
 .article__sub-sub-title{
-  margin: 20px 10px;
-  font-weight: bold;
+ margin: 20px 10px;
+ font-weight: bold;
 }
 
-/* 番号ありリスト */
+/*番号ありリスト*/
 .article__order-list-item{
-  margin: 20px 10px;
+ margin: 20px 10px;
 }
 
-/* 唐揚げ画像のサイズ調整 */
+/*唐揚げ画像のサイズ調整*/
 .article__image{
   width: 95%;
   margin: 20px 15px;
+}
+
+
+/*問い合わせフォーム
+.form{
+  background-color: white;
+}
+
+.form-item{
+  text-align:　center;
+}*/
+
+/*広告バナーの周囲に余白を設定*/
+.aside-ads__item{
+  margin: 10px 15px;
 }
