@@ -88,22 +88,21 @@ body {
   box-sizing: border-box;
   width: 980px;
   background-color: #DCDCDC;
-  padding: 25px;
+  padding: 10px;
   margin: 5px auto;
 }
 
 .top-ads__items{
   display: flex;
-  padding: 0px 8px;
 }
 
 .top-ads__item{
   flex: 1;
-  margin: 0 8px;
-}
+  padding: 0px 8px;
+ }
 
 .top-ads__image {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 /* 大枠のレイアウト配置 */
@@ -148,16 +147,18 @@ body {
 
 /*ページタイトル*/
 .main-header{
-  margin: -10px auto;
+  margin: -5px auto;
   background-color: white;
   height: 80px;
   -webkit-box-shadow: 1px 1px 1px 1px #dadada;
 box-shadow: 1px 1px 1px 1px #dadada;
 }
+
 .main-header__title{
   font-size: 30px;
   font-weight: bold;
 }
+
 
 /*記事タイトル*/
 .article__title{
