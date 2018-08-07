@@ -231,3 +231,9 @@ body {
   list-style-type: disc;
   padding: 25px;
 }
+
+/* 番号ありリストに数字を追加 */
+.article__order-list {
+  list-style-type: decimal;
+  padding: 25px;
+}
