@@ -225,3 +225,9 @@ body {
 .aside-ads__item{
   margin: 10px 15px;
 }
+
+/* 番号なしリストに黒丸を追加 */
+.article__unorder-list {
+  list-style-type: disc;
+  padding: 25px;
+}
