@@ -24,7 +24,6 @@ body {
 }
 
 /* サイトタイトル部分の高さや文字の配置など */
-
 .header{
   background-color: gray;
   height: 80px;
@@ -37,7 +36,7 @@ body {
   padding: 30px;
 }
 
-/* グローバルナビ*/
+/* グローバルナビ */
 .global-nav{
   width: 980px;
   margin: 0 auto;
@@ -51,18 +50,28 @@ body {
  }
 
 
-/*均等配置*/
+/* 均等配置 */
 .global-nav__items li { flex: auto; -webkit-flex: auto;
 }
 
 
-/*色を交互に*/
-.global-nav__item:nth-child(even){
+/* 色を交互に リンクに設定する */
+.global-nav__item:nth-child(even) .global-nav__link{
   background-color: #A9A9A9;
 }
 
-.global-nav__item:nth-child(odd){
+.global-nav__item:nth-child(odd) .global-nav__link{
   background-color: #DCDCDC;
+}
+
+.global-nav__link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: Black;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 /* パンくずリストを横並びに */
@@ -77,10 +86,20 @@ body {
 }
 
 /* パンくずリストに">"を追加 */
-.bread-crumbs__items li:not(:last-child)::after{
+.bread-crumbs__items li:not(:last-child) .bread-crumbs__link::after{
   content: ">";
   margin-left: 6px;
   margin-right: 6px;
+}
+
+/* パンくず部分のリンクを非表示に */
+.bread-crumbs__link{
+  text-decoration: none;
+  color: white;
+}
+
+.bread-crumbs{
+  padding: 5px 15px;
 }
 
 /* 広告バナーを横並びに */
@@ -106,7 +125,6 @@ body {
 }
 
 /* 大枠のレイアウト配置 */
-
 .body{
   display: flex;
 }
@@ -116,7 +134,7 @@ body {
 }
 
 .main{
-  order: 0;
+ 　order: 0;
   background-color: #e6e6e6;
 }
 
@@ -124,25 +142,48 @@ body {
   display: flex;
   background-color: #3b3b3b;
   flex-wrap: wrap;
+  height: 300px;
+
 }
 
 .footer-nav{
   display: flex;
   order: 0;
   flex-basis: 50%;
+  margin: 20px 0;
+}
+
+/* フッターナビのリンクを非表示に、フォントの文字色を変更 */
+.footer-nav__items .footer-nav__link{
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+/* フッターナビに">"をつけた */
+.footer-nav__items li .footer-nav__link::before{
+  content: ">";
+  margin: 0px 6px;
+}
+
+.footer-nav__item{
+  font-size: 0.9em;
+  margin:  10px 5px;
 }
 
 .about-author{
   order: 1;
   background-color: #DCDCDC;
-  flex-basis: 50%;
+  flex-basis: 45%;
+  padding: 10px;
+  margin: 10px;
 }
 
 .footer-copyright{
   order: 2;
   flex-basis: 100%;
   text-align: center;
-  background-color: white;
+  color: white;
 }
 
 /* ページタイトル */
@@ -150,26 +191,32 @@ body {
   margin: -5px auto;
   background-color: white;
   height: 80px;
-  -webkit-box-shadow: 1px 1px 1px 1px #dadada; /* ボックスの下に色をつけた*/
+  -webkit-box-shadow: 1px 1px 1px 1px #dadada;
   box-shadow: 1px 1px 1px 1px #dadada;
 }
+
 
 .main-header__title{
   font-size: 30px;
   font-weight: bold;
 }
 
+.article{
+  padding: 6px;
+  line-height: 150% /* 行間の高さをフォントサイズからの割合で指定 */
+}
 
-/* 記事タイトル */
+
+/*記事タイトル*/
 .article__title{
-  font-size: 25px;
-  margin: 20px 10px;
+  font-size: 26px;
+  margin: 25px 25px;
   font-weight: bold;
 }
 
 /* 段落 */
 .article__paragraph{
-  margin: 20px 10px 10px 10px;
+  margin: 20px;
 }
 
 /* 記事の一部を太字に */
@@ -179,30 +226,32 @@ body {
 
 /* 記事見出し */
 .article__sub-title{
-  margin: 20px 10px;
-  font-size: 25px;
+  margin: 20px 20px;
+  font-size: 22px;
   font-weight: bold;
 }
 
 /* 番号なしリスト */
 .article__unorder-list-item{
-  margin: 20px 10px;
+  margin: 10px;
 }
 
 /* 引用文内 */
 .article__blockquote{
-  margin: 20px 10px;
+  margin: 10px;
+
 }
 
 /* 小見出し */
 .article__sub-sub-title{
   margin: 20px 10px;
   font-weight: bold;
+  font-size: 18px;
 }
 
 /* 番号ありリスト */
 .article__order-list-item{
-  margin: 20px 10px;
+  margin: 10px;
 }
 
 /* 唐揚げ画像のサイズ調整 */
@@ -212,14 +261,6 @@ body {
 }
 
 
-/* 問い合わせフォーム
-.form{
-  background-color: white;
-}
-
-.form-item{
-  text-align:　center;
-} */
 
 /* 広告バナーの周囲に余白を設定 */
 .aside-ads__item{
@@ -236,4 +277,386 @@ body {
 .article__order-list {
   list-style-type: decimal;
   padding: 25px;
+}
+
+/* ローカルナビに背景色とボックスを作成 */
+.local-nav__item .local-nav__link{
+  display: flex;
+  height: 30px;
+  margin: 1px 0;
+  background-color: #A9A9A9;
+  color: white;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px;
+}
+
+/* ローカルナビをスクロールに */
+.local-nav__items{
+  height: 110px;
+  overflow: auto;
+  margin: 0 15px;
+}
+
+
+/* ページタイトル横のロゴ */
+.main-header{
+  padding: 25px;
+}
+
+
+.main-header__title{
+ font-weight: bold;
+ position: relative; /* 絶対値の時は、親要素につける */
+ padding-left: 45px;
+}
+
+.main-header__title::before{
+  content: "";
+  display: block; /* 改行を入れる */
+  width: 15px;
+  height: 15px;
+  background-color: #A9A9A9;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-right: solid 15px #3b3b3b;
+}
+
+.main-header__title::after{
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: #3b3b3b;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-right: solid 15px #A9A9A9;
+}
+
+/* 記事タイトル横のロゴ */
+.article__title{
+  position: relative;
+  padding-left: 45px;
+}
+
+
+.article__title::before{
+  content: "";
+  width: 10px;
+  height: 13px;
+  background-color: #A9A9A9;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.article__title::after{
+  content: "";
+  width: 10px;
+  height: 13px;
+  background-color: #3b3b3b;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+
+/* 記事見出し横にロゴを作成 */
+.article__sub-title{
+  position: relative;
+  padding-left: 45px;
+}
+
+.article__sub-title::before{
+  content: "";
+  width: 5px;
+  height: 20px;
+  background-color: #3b3b3b;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.article__sub-title::after{
+  content: "";
+  width: 0;
+  height: 0;
+  border: 10px solid transparent; /*"透過*/
+  border-left: 15px solid #3b3b3b;
+  display: block;
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+}
+
+/* 引用文横にロゴを作成 */
+.article__blockquote{
+  border-left: solid 5px gray; /* border を付ける */
+  padding: 20px 15px 0;
+  position: relative;
+}
+
+.article__blockquote::before{
+  content: "''";
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  background-color: gray;
+  color: white;
+  font-size: 32px;
+  padding-top: 16px;
+  box-sizing: border-box; /* width と height の値を padding、border を含んでその値にする */
+  border-radius: 50%; /* 丸くする */
+  position: absolute;
+  left: -20px;
+  top: -15px;
+}
+
+/* 小見出し */
+.article__sub-sub-title{
+  position: relative;
+  padding-left: 35px;
+}
+.article__sub-sub-title::before{
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #3b3b3b;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 5px;
+  border-radius: 50%;
+}
+
+.article__sub-sub-title::after{
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #A9A9A9;
+  position: absolute;
+  display: block;
+  left: 10px;
+  bottom: 4px;
+  border-radius: 50%;
+}
+
+
+/* メールアイコン */
+.form{
+  padding: 26px 25px;
+  position: relative;
+}
+
+.form::before{
+  content: "";
+  width: 55px;
+  height: 26px;
+  display: block;
+  position: absolute;
+  background-color: white;
+  left: 18px;
+  top: 0;
+  z-index: 1;
+}
+
+.form__title{
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  padding-left: 70px;
+}
+
+.form__title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: solid 2px black;
+  width: 40px;
+  height: 22px;
+  display: block;
+}
+
+.form__title::after{
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: -18px;
+  border: solid 2px black; /* ボーダーをつける
+ */
+  width: 29px;
+  height: 29px;
+  display: block;
+  transform: rotate(45deg)/* 回転
+ */
+}
+
+
+/* 問い合わせフォーム */
+.form{
+  background-color: white;
+}
+
+.form-item{
+  display: flex;
+  text-align: right;
+  line-height: 10%;
+}
+
+.form-item__label{
+  flex-basis: 200px;
+  padding: 16px;
+  margin: 10px;
+  height: 35px;
+}
+
+.form input{
+  padding: 10px;
+  margin: 10px 0;
+}
+
+
+/* 入力欄の幅を広げる */
+.form-item__text-input{
+  flex-grow: 100;
+}
+
+.form-item__textarea{
+  flex-grow: 100;
+}
+
+.form-item__select-pull-down{
+  flex-grow: 100;
+  margin: 15px 0;
+}
+
+/* リストセレクト */
+.form-item__select-list{
+  flex-grow: 100;
+  align-items: center;
+  background-color: gray;
+  margin: 15px 0;
+  height: 145px;
+}
+
+.form-item__select-list-option{
+  background-color: #dadada;
+  margin: 1px 0 0;
+  padding: 5px;
+}
+
+
+/* ラジオボタンの作成 */
+.form-item__radio{
+  display: inline-block;
+  background-color: #dadada;
+  padding: 5px 8px;
+  margin: 16px 16px 8px 0;
+  border-radius: 8%; /* 角を丸くする */
+}
+
+/* チェックボックスの作成 */
+.form-item__checkbox{
+  display: inline-block;
+  background-color: #dadada;
+  padding: 5px 8px;
+  margin: 16px 16px 10px 0;
+  border-radius: 8%; /* 角を丸くする */
+}
+
+.form-item__inline-items{
+  display: flex;
+}
+
+/* 複数行の入力欄 */
+.form-item textarea{
+  padding: 50px;
+}
+
+/* ファイル選択のbox作成 */
+.form-item__file{
+  display: inline-block;
+  background-color: #dadada;
+  padding: 5px 8px;
+  margin: 16px 16px 8px 0;
+  border-radius: 3%; /* 角を丸くする */
+  flex-grow: 100;
+}
+
+/* ボタンを横並び */
+.form-item__actions-items{
+  display: flex;
+}
+
+/* ボタンの幅を広げる */
+.form-item__actions-items input{
+  width: 180px;
+  border-radius: 5%;
+  margin: 10px 10px 0 0;
+}
+
+/* ボタンの色を変更する */
+.form input[type=submit]{
+  background-color: #3B3B3B;
+  color: white;
+}
+
+
+
+/* ページタイトルに折り返し部分 */
+.main-header{
+  position:relative;
+}
+
+.main-header:after{
+  content: "";
+  position: absolute;
+  top:0;
+  right:0;
+  width:0;
+  height:0;
+  border-style: solid;
+  border-color: transparent #DCDCDC #A9A9A9 transparent;
+  border-width: 0 35px 35px 0;
+}
+
+.about-author{
+ display: flex;
+ flex-wrap: wrap;　
+}
+
+.about-author__title{
+ flex-basis: 100%;
+}
+
+.about-author__image{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.about-author__descriptions{
+  flex-basis: calc(100% - 80px);
+  display: flex;
+  flex-wrap: wrap;　  /* フレックスアイテムは折り返され、複数行で表示される */
+}
+
+.about-author__term{
+  flex: 0 0 110px;      /* 次の要素(名前と所属など)との間隔を広げる */
+  text-align: right;
+  padding-right: 16px;
+}
+
+.about-author__description{
+  flex-basis: calc(100% - 110px);
 }
